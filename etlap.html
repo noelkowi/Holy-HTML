@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaKo BurgerZ - Étlap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./holy.css">
+    <script src="./holy.js" defer></script>
+    <script src="./kosar.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">JaKo BurgerZ</h1>
+        
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="./kosar.html" class="cart-btn">
+                🛒 Kosár (<span id="kosar-szamlalo">0</span>)
+            </a>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">Menü ☰</button>
+                <div class="dropdown-content">
+                    <a href="holy.html">Főmenü</a>
+                    <a href="etlap.html">Étlap</a>
+                    <a href="kosar.html">Kosár / Rendelés</a>
+                    <a href="infok.html">Infók</a>
+                    <a href="rolunk.html">Rólunk</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="menu-container">
+        <div class="menu-header">
+            <h2>A Kínálat</h2>
+            <p class="menu-subtitle">Minden burgerünk 150g-os, helyben darált marhahússal és pirított vajsütis buciban érkezik.</p>
+        </div>
+
+        <!-- BURGEREK -->
+        <h3 class="category-title">Burgerek</h3>
+        <section class="items-grid">
+            <div class="card">
+                <div class="card-badge spicy">BEST SELLER</div>
+                <img src="./képek/háttér/JaKo monster.jpg" alt="The JaKo Monster" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>The JaKo Monster</h4>
+                        <span class="price">4290 Ft</span>
+                    </div>
+                    <p class="ingredients">Dupla 150g marhahús, tripla ír cheddar, ropogós bacon jam, pirított hagyma, saját füstös JaKo szósz.</p>
+                    <button onclick="kosarbaRak('The JaKo Monster', 4290)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/smokyburger.jpg" alt="Smoky Bastard" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Smoky Bastard</h4>
+                        <span class="price">3690 Ft</span>
+                    </div>
+                    <p class="ingredients">150g marhahús, füstölt scamorza sajt, vastag grill bacon, BBQ szósz, csemegeuborka-relish, pirított hagyma.</p>
+                    <button onclick="kosarbaRak('Smoky Bastard', 3690)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-badge spicy">SPICY 🌶️</div>
+                <img src="./képek/háttér/chillbruger.jpg" alt="Hellfire Smash" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Hellfire Smash</h4>
+                        <span class="price">3790 Ft</span>
+                    </div>
+                    <p class="ingredients">Dupla smash marhahús, pepper jack sajt, savanyított jalapeño, chipotle majonéz, ropogós nachos morzsa.</p>
+                    <button onclick="kosarbaRak('Hellfire Smash', 3790)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/trufle.jpg" alt="Truffle King" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Truffle King</h4>
+                        <span class="price">3990 Ft</span>
+                    </div>
+                    <p class="ingredients">150g marhahús, fekete szarvasgombás majonéz, grillezett csiperkegomba, rukkola, parmezánforgács.</p>
+                    <button onclick="kosarbaRak('Truffle King', 3990)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- KÖRETEK & EXTRÁK -->
+        <h3 class="category-title">Köretek & Extrák</h3>
+        <section class="items-grid">
+            <div class="card">
+                <img src="./képek/háttér/simafries.jpg" alt="Hasábburgonya" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Hasábburgonya</h4>
+                        <span class="price">850 Ft</span>
+                    </div>
+                    <p class="ingredients">Egyszerű, ropogós, pont ahogy szereted.</p>
+                    <button onclick="kosarbaRak('Hasábburgonya', 850)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/héjjas.jpg" alt="Fűszeres héjás" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Fűszeres héjás</h4>
+                        <span class="price">1000 Ft</span>
+                    </div>
+                    <p class="ingredients">Héjában sült, fűszeres burgonya.</p>
+                    <button onclick="kosarbaRak('Fűszeres héjás', 1000)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/rustiyfries.jpg" alt="Dirty Fries" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Dirty Fries</h4>
+                        <span class="price">1690 Ft</span>
+                    </div>
+                    <p class="ingredients">Fűszeres rusztikus sült krumpli olvasztott sajtszósszal, aprított baconnel és jalapeñóval leöntve.</p>
+                    <button onclick="kosarbaRak('Dirty Fries', 1690)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/hagymakarika.jpg" alt="JaKo Hagymahalom" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>JaKo Hagymahalom</h4>
+                        <span class="price">1490 Ft</span>
+                    </div>
+                    <p class="ingredients">Sörbundás vastag hagymakarikák házi füstös BBQ mártogatóssal.</p>
+                    <button onclick="kosarbaRak('JaKo Hagymahalom', 1490)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ITALOK & ÜDÍTŐK -->
+        <h3 class="category-title">Italok & Üdítők</h3>
+        <section class="items-grid">
+            <div class="card">
+                <img src="./képek/háttér/Shake.jpg" alt="Jako Shakes" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Jako Shakes (0.5L)</h4>
+                        <span class="price">890 Ft</span>
+                    </div>
+                    <p class="ingredients">Sűrű, krémes vaníliafagyi alap, házilag főzött sós karamellel, bőséges tejszínhabbal és roppanós karamellkockákkal.</p>
+                    <button onclick="kosarbaRak('Jako Shakes (0.5L)', 890)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/limonade.jpg" alt="LemonZ" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>LemonZ (0.5L)</h4>
+                        <span class="price">890 Ft</span>
+                    </div>
+                    <p class="ingredients">Klaszikus limonádé egy kis JakoZ bolondítással.</p>
+                    <button onclick="kosarbaRak('Monster Pacific Punch (0.5L)', 890)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/energy.jpg" alt="EnergyZ" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>EnergyZ (0.5L)</h4>
+                        <span class="price">890 Ft</span>
+                    </div>
+                    <p class="ingredients">Zéró cukor, lágy citrusos íz és maximális pörgés kompromisszumok nélkül.</p>
+                    <button onclick="kosarbaRak('Monster Ultra White (0.5L)', 890)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/cola.jpg" alt="ColaZ" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>ColaZ (0.33L)</h4>
+                        <span class="price">590 Ft</span>
+                    </div>
+                    <p class="ingredients">Jéghideg, klasszikus kóla friss citromkarikával felszolgálva.</p>
+                    <button onclick="kosarbaRak('Coca-Cola Classic (0.33L)', 590)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./képek/háttér/palete cleanser.jpg" alt="Palate cleanser" class="card-img">
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4>Palate cleanser (0,5L)</h4>
+                        <span class="price">590 Ft</span>
+                    </div>
+                    <p class="ingredients">Jéghideg forrás víz friss citromkarikával felszolgálva.</p>
+                    <button onclick="kosarbaRak('Palate cleanser (0,5L)', 400)" class="order-btn">Kosárba +</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

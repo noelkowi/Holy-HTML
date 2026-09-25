@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaKo BurgerZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./holy.css">
+    <script src="./holy.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">JaKo BurgerZ</h1>
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="./kosar.html" class="cart-btn">
+                🛒 Kosár (<span id="kosar-szamlalo">0</span>)
+            </a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Menü ☰</button>
+                <div class="dropdown-content">
+                    <a href="holy.html">Főmenü</a>
+                    <a href="etlap.html">Étlap</a>
+                    <a href="kosar.html">Kosár / Rendelés</a>
+                    <a href="infok.html">Infók</a>
+                    <a href="rolunk.html">Rólunk</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-container">
+        <div class="hero-content">
+            <span class="hero-badge">100% Kézműves Marhahús</span>
+            <h2 class="hero-title">Harapj rá a valóságra.</h2>
+            <p class="hero-desc">Nem diétás, hanem legendás. Füstös parázson sült prémium pogácsák, házi vajsütis buci és saját szószok – zéró mellébeszélés.</p>
+            
+            <div class="hero-actions">
+                <a href="etlap.html" class="btn btn-primary">Étlap böngészése 🔥</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">150g+</span>
+                    <span class="stat-label">Húspogácsák</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Friss alapanyag</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">🔥</span>
+                    <span class="stat-label">Parázson sütve</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

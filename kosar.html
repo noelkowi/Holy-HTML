@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaKo BurgerZ - Kosár & Rendelés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./holy.css">
+    <script src="./holy.js" defer></script>
+    <script src="./kosar.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">JaKo BurgerZ</h1>
+        <div class="dropdown">
+            <button class="dropdown-btn">Menü ☰</button>
+            <div class="dropdown-content">
+                <a href="holy.html">Főmenü</a>
+                <a href="etlap.html">Étlap</a>
+                <a href="infok.html">Infók</a>
+                <a href="rolunk.html">Rólunk</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h2 class="cart-title">A Kosarad</h2>
+
+        <div class="cart-content">
+            <!-- Bal oldal: Kiválasztott ételek (JS generálja) -->
+            <div class="cart-items" id="kosar-elemek"></div>
+
+            <!-- Jobb oldal: Összegzés ÉS a rendelési űrlap -->
+            <div class="cart-summary">
+                <h3>Összegzés</h3>
+                <div class="summary-row">
+                    <span>Részösszeg:</span>
+                    <span id="reszosszeg">0 Ft</span>
+                </div>
+                <div class="summary-row">
+                    <span>Szállítási díj:</span>
+                    <span>500 Ft</span>
+                </div>
+                <div class="summary-total">
+                    <span>Végösszeg:</span>
+                    <span id="vegosszeg">0 Ft</span>
+                </div>
+
+                <!-- Űrlap a tanári követelményekhez -->
+                <form id="rendeles-form" novalidate>
+                    <div class="form-group">
+                        <label for="nev">Név:</label>
+                        <input type="text" id="nev" placeholder="pl. Kovács János">
+                        <span class="error-msg" id="hiba-nev"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel">Telefonszám:</label>
+                        <input type="tel" id="tel" placeholder="06301234567">
+                        <span class="error-msg" id="hiba-tel"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cim">Cím:</label>
+                        <input type="text" id="cim" placeholder="Város, utca, házszám">
+                        <span class="error-msg" id="hiba-cim"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fizetes">Fizetés:</label>
+                        <select id="fizetes">
+                            <option value="keszpenz">Készpénz futárnál</option>
+                            <option value="bankkartya">Bankkártya futárnál</option>
+                            <option value="szepkartya">SZÉP kártya</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="checkout-btn" style="border: none; cursor: pointer; width: 100%;">
+                        Rendelés leadása 🔥
+                    </button>
+                </form>
+
+                <div id="rendeles-visszajelzes" class="order-feedback" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

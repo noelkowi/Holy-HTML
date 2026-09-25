@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaKo BurgerZ - Infók</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./holy.css">
+    <script src="./holy.js" defer></script>
+    <script src="./kosar.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">JaKo BurgerZ</h1>
+        
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="./kosar.html" class="cart-btn">
+                🛒 Kosár (<span id="kosar-szamlalo">0</span>)
+            </a>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">Menü ☰</button>
+                <div class="dropdown-content">
+                    <a href="holy.html">Főmenü</a>
+                    <a href="etlap.html">Étlap</a>
+                    <a href="infok.html">Infók</a>
+                    <a href="rolunk.html">Rólunk</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="info-container">
+        <div class="menu-header">
+            <h2>Tudnivalók</h2>
+            <p class="menu-subtitle">Minden, amit a rendelésről, nyitvatartásról és a helyről tudni érdemes.</p>
+        </div>
+
+        <div class="info-grid">
+            <!-- 1. Nyitvatartás -->
+            <div class="info-card">
+                <span class="info-icon">🕒</span>
+                <h3>Nyitvatartás</h3>
+                <div class="info-row">
+                    <span>Hétfő – Csütörtök:</span>
+                    <strong>11:30 – 21:00</strong>
+                </div>
+                <div class="info-row">
+                    <span>Péntek – Szombat:</span>
+                    <strong>11:30 – 23:00</strong>
+                </div>
+                <div class="info-row">
+                    <span>Vasárnap:</span>
+                    <strong>12:00 – 21:00</strong>
+                </div>
+            </div>
+
+            <!-- 2. Helyszín & Elérhetőség -->
+            <div class="info-card">
+                <span class="info-icon">📍</span>
+                <h3>Hol találsz meg?</h3>
+                <p><strong>Cím:</strong> Gasztro Utca 12., Fő tér mellett</p>
+                <p><strong>Telefon:</strong> +36 30 123 4567</p>
+                <p><strong>E-mail:</strong> info@jakoburgerz.hu</p>
+                <p class="info-note">Asztalfoglalást telefonon és e-mailben is felveszünk.</p>
+            </div>
+
+            <!-- 3. Házhozszállítás -->
+            <div class="info-card">
+                <span class="info-icon">🛵</span>
+                <h3>Szállítási Infók</h3>
+                <div class="info-row">
+                    <span>Alapdíj:</span>
+                    <strong>500 Ft</strong>
+                </div>
+                <div class="info-row">
+                    <span>Átlagos idő:</span>
+                    <strong>35 – 50 perc</strong>
+                </div>
+                <div class="info-row">
+                    <span>Ingyenes szállítás:</span>
+                    <strong>8 000 Ft felett</strong>
+                </div>
+                <p class="info-note">Hővédő dobozokban szállítunk, hogy a buci ropogós, a sajt folyós maradjon.</p>
+            </div>
+
+            <!-- 4. Fizetési lehetőségek -->
+            <div class="info-card">
+                <span class="info-icon">💳</span>
+                <h3>Fizetés</h3>
+                <p>Nálunk kényelmesen rendezheted a számlát a futárnál és a bárban is:</p>
+                <ul class="info-list">
+                    <li>Készpénz (HUF)</li>
+                    <li>Bankkártyás fizetés</li>
+                    <li>SZÉP kártya (OTP, MBH, K&H)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
